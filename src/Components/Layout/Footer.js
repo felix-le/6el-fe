@@ -127,7 +127,7 @@ const Footer = () => {
                 <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
                   Solutions
                 </h3>
-                <ul role="list" className="mt-4 space-y-4">
+                <ul className="mt-4 space-y-4">
                   {footerNavigation.solutions.map(item => (
                     <li key={item.name}>
                       <a
@@ -144,7 +144,7 @@ const Footer = () => {
                 <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
                   Support
                 </h3>
-                <ul role="list" className="mt-4 space-y-4">
+                <ul className="mt-4 space-y-4">
                   {footerNavigation.support.map(item => (
                     <li key={item.name}>
                       <a
@@ -163,7 +163,7 @@ const Footer = () => {
                 <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
                   Company
                 </h3>
-                <ul role="list" className="mt-4 space-y-4">
+                <ul className="mt-4 space-y-4">
                   {footerNavigation.company.map(item => (
                     <li key={item.name}>
                       <a
@@ -180,7 +180,7 @@ const Footer = () => {
                 <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
                   Legal
                 </h3>
-                <ul role="list" className="mt-4 space-y-4">
+                <ul className="mt-4 space-y-4">
                   {footerNavigation.legal.map(item => (
                     <li key={item.name}>
                       <a
