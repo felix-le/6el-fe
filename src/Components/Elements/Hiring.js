@@ -18,3 +18,4 @@ const Hiring = () => {
     </a>
   );
 };
+export default Hiring;

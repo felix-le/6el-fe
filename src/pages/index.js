@@ -1,55 +1,59 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../Components/Layout';
+import Banner from '../Components/Elements/Banner';
+import Intro from '../Components/Elements/Intro';
+
 export default function Home({ data }) {
+  console.log('🚀 data', data);
   return (
     <Layout>
-      {/* {data.allStrapiHome.edges.map(({ node }) => ( */}
-      <div className="bg-white">
-        <div className="relative overflow-hidden">
-          <main>
-            {/* <Banner 
-              title=
-              description=
-              input=
-            />
-            <Intro 
-              preTitle=
-              title=
-              description=
-              image=
-            /> */}
+      {data.allStrapiHome.edges.map(({ node, i }) => (
+        <div className="bg-white" key={i}>
+          <div className="relative overflow-hidden">
+            <main>
+              <Banner
+                title={node.homeBanner.title}
+                description={node.homeBanner.description}
+                input={node.homeBanner.input}
+              />
+              <Intro
+                preTitle={node.intro.preTitle}
+                title={node.intro.title}
+                description={node.intro.description}
+                image={node.intro.image.localFile.publicURL}
+              />
 
-            <div className="relative bg-white py-16 sm:py-24 lg:py-32">
-              <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
-                <h2 className="text-base font-semibold tracking-wider text-orange-600 uppercase">
-                  {/* Pre Title */}
-                </h2>
-                <p className="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">
-                  {/* Title */}
-                </p>
-                <p className="mt-5 max-w-prose mx-auto text-xl text-gray-500">
-                  {/* Description */}
-                </p>
-                <div className="mt-12">
-                  <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-                    {/* There are a few features... might need to do something different here. ;)
+              <div className="relative bg-white py-16 sm:py-24 lg:py-32">
+                <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
+                  <h2 className="text-base font-semibold tracking-wider text-orange-600 uppercase">
+                    {/* Pre Title */}
+                  </h2>
+                  <p className="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">
+                    {/* Title */}
+                  </p>
+                  <p className="mt-5 max-w-prose mx-auto text-xl text-gray-500">
+                    {/* Description */}
+                  </p>
+                  <div className="mt-12">
+                    <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                      {/* There are a few features... might need to do something different here. ;)
                       <Feature key=
                         title=
                         description=
                       /> 
                     */}
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            {/* <Testimonial 
+              {/* <Testimonial 
               testimonial=
             /> */}
-          </main>
+            </main>
+          </div>
         </div>
-      </div>
-      {/* ))} */}
+      ))}
     </Layout>
   );
 }

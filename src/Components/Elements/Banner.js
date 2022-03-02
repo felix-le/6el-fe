@@ -1,7 +1,7 @@
 import React from 'react';
 import Hiring from './Hiring';
 
-const Banner = props => {
+const Banner = ({ title = '', description = '', input = '' }) => {
   return (
     <div className="pt-10 bg-gray-900 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden">
       <div className="mx-auto max-w-7xl lg:px-8">
@@ -12,11 +12,11 @@ const Banner = props => {
               <h1 className="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
                 <span className="block">A Better Way To</span>
                 <span className="pb-3 block bg-clip-text text-transparent bg-gradient-to-r text-orange-400 sm:pb-5">
-                  {props.title}
+                  {title}
                 </span>
               </h1>
               <p className="text-base text-gray-300 sm:text-xl lg:text-lg xl:text-xl">
-                {props.description}
+                {description}
               </p>
               <div className="mt-10 sm:mt-12">
                 <form action="#" className="sm:max-w-xl sm:mx-auto lg:mx-0">
@@ -41,9 +41,7 @@ const Banner = props => {
                       </button>
                     </div>
                   </div>
-                  <p className="mt-3 text-sm text-gray-300 sm:mt-4">
-                    {props.input}
-                  </p>
+                  <p className="mt-3 text-sm text-gray-300 sm:mt-4">{input}</p>
                 </form>
               </div>
             </div>
