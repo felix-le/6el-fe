@@ -1,0 +1,27 @@
+@tailwind base;
+
+h1 {
+  @apply text-2xl;
+}
+h2 {
+  @apply text-xl;
+}
+h3 {
+  @apply text-lg;
+}
+a {
+  @apply text-blue-600;
+}
+
+@tailwind components;
+@tailwind utilities;
+
+.testimonial p {
+  margin-bottom: 1rem;
+}
+
+.testimonial h4 {
+  opacity: 0.5;
+  font-size: 1rem;
+  line-height: 1.3rem;
+}
