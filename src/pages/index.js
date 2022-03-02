@@ -1,15 +1,14 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import Layout from '../Components/Layout';
-import Banner from '../Components/Elements/Banner';
-import Intro from '../Components/Elements/Intro';
-import Feature from '../Components/Elements/Feature';
-import Testimonial from '../Components/Elements/Testimonial';
+import Layout from '../components/Layout';
+import Banner from '../components/Elements/Banner';
+import Intro from '../components/Elements/Intro';
+import Feature from '../components/Elements/Feature';
+import Testimonial from '../components/Elements/Testimonial';
 export default function Home({ data }) {
   const {
     allStrapiHome: { edges: node },
   } = data;
-  console.log('  node', node);
 
   return (
     <Layout>
@@ -58,8 +57,7 @@ export default function Home({ data }) {
                   </div>
                 </div>
                 {/* End Feature Intro */}
-
-                {/* <Testimonial testimonial={node.testimonial.testimonial} /> */}
+                <Testimonial testimonial={node.testimonial.testimonial} />
               </React.Fragment>
             ))}
           </main>
