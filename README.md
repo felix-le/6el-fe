@@ -11,7 +11,8 @@ Working time: 2+ hours <br/>
 - Working on rendering the site: 40 mins <br/>
 - Working on fixing the multiple modules with the same name + unique key while rendering: 30 mins <br/>
 - Working on writing readme file and deploying: 20 mins <br/>
-  Link: [Link](https://romantic-khorana-feb5b7.netlify.app/)
+
+**Live Link**: [Link](https://romantic-khorana-feb5b7.netlify.app/)
 
 **Requirements:** <br/>
 Using NPM 14.17.0. We use NVM in house to toggle our node version.
